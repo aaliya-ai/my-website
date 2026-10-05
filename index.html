@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Munzor Jehan Sir 💗</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;
+ font-family:Georgia,serif;
+ background:linear-gradient(145deg,#fce7f3,#f4d8ff,#dcd8ff);
+ color:#71406d;text-align:center;
+}
+#app{max-width:440px;min-height:100vh;margin:auto;
+ padding:25px 22px 40px;position:relative;overflow:hidden}
+.screen{display:none;animation:enter .65s ease}
+.screen.active{display:block}
+@keyframes enter{
+ from{opacity:0;transform:translateY(18px)}
+ to{opacity:1;transform:translateY(0)}
+}
+.small{letter-spacing:2px;font:11px Arial,sans-serif;
+ color:#a66d9b;margin-top:35px}
+h1{font-size:39px;line-height:1.15;color:#b54e91}
+h2{color:#bd5799}
+p{font-size:15px;line-height:1.8}
+.hero{font-size:66px;margin:35px 0 20px;
+ animation:bob 2s infinite ease-in-out}
+@keyframes bob{50%{transform:translateY(-9px)}}
+button{
+ border:0;border-radius:28px;padding:14px 24px;
+ background:linear-gradient(100deg,#ed72bd,#b77af2);
+ color:white;font-weight:bold;font-size:14px;
+ box-shadow:0 6px 18px #c36fba45;
+ cursor:pointer;margin:12px 4px
+}
+button:active{transform:scale(.97)}
+.panel{
+ background:#ffffffb8;border:1px solid white;
+ border-radius:22px;padding:22px 18px;
+ margin:22px 0;box-shadow:0 8px 25px #b27bb51a
+}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{
+ border-radius:17px;padding:19px 8px;
+ background:#fff9fe;border:1px solid #f4d4ed;
+ font-size:14px;line-height:1.7
+}
+.emoji{font-size:29px;display:block;margin-bottom:8px}
+#envelope{
+ margin:35px auto;width:210px;height:135px;
+ position:relative;background:#ff83c6;border-radius:8px;
+ display:grid;place-items:center;font-size:40px;
+ cursor:pointer;box-shadow:0 9px 20px #cc69aa45;
+}
+#envelope:before{
+ content:"";position:absolute;inset:0;
+ background:#ffa6d7;
+ clip-path:polygon(0 0,50% 58%,100% 0);
+}
+#envelope span{z-index:1}
+.letter{
+ text-align:left;background:#fffdf8;
+ border-left:4px solid #f0a8cf;padding:22px;
+ color:#704a65;border-radius:5px;line-height:1.9;
+ font-size:14px
+}
+#letter{display:none}
+.reason{background:#fff8fd;border-radius:13px;
+ padding:13px;margin:10px 0;font-size:14px}
+.gift{font-size:95px;cursor:pointer;animation:bob 1.8s infinite}
+footer{font:11px Arial,sans-serif;color:#a77a9e;margin-top:30px}
+.confetti{position:fixed;top:-20px;z-index:10;
+ pointer-events:none;animation:drop 3.5s linear forwards}
+@keyframes drop{to{transform:translateY(110vh) rotate(650deg);opacity:0}}
+</style>
+</head>
+<body>
+<main id="app">
+
+<section class="screen active" id="s1">
+ <div class="small">A LITTLE SURPRISE MADE JUST FOR YOU ✨</div>
+ <div class="hero">🌷💗🌷</div>
+ <h1>Happy<br>Teachers' Day!</h1>
+ <p>A little surprise for a teacher<br>who deserves a lot of appreciation.</p>
+ <div class="panel">
+  <span class="emoji">🎀</span>
+  <h2>Dear Munzor Jehan Sir</h2>
+  <p>Someone has created something special for you, with respect, gratitude and a little bit of code. 💻</p>
+ </div>
+ <button onclick="go(2)">Continue ✨ →</button>
+</section>
+
+<section class="screen" id="s2">
+ <div class="small">A MOMENT OF APPRECIATION 💕</div>
+ <h1>Thank You For Everything!</h1>
+ <p>Every teacher leaves something beautiful in the lives of their students.</p>
+ <div class="cards">
+  <div class="tile"><span class="emoji">❤️</span><b>For your support</b><br>Thank you for encouraging me.</div>
+  <div class="tile"><span class="emoji">💗</span><b>For your guidance</b><br>Thank you for showing me the way.</div>
+  <div class="tile"><span class="emoji">⭐</span><b>For your belief</b><br>Thank you for seeing my potential.</div>
+  <div class="tile"><span class="emoji">🌷</span><b>For your kindness</b><br>Thank you for making a difference.</div>
+ </div>
+ <button onclick="go(3)">Read A Special Letter 💌</button>
+</section>
+
+<section class="screen" id="s3">
+ <div class="small">SOMETHING FROM THE HEART 💌</div>
+ <h2>A Letter For My Teacher</h2>
+ <p>Sir Munzor Jehan, this letter is especially for you.</p>
+ <div id="envelope" onclick="openLetter()"><span>💌</span></div>
+ <p id="hint">Tap the envelope to open your letter.</p>
+ <div id="letter" class="letter">
+  Dear Sir Munzor Jehan, ❤️<br><br>
+  As a 5th-semester Computer Science student, I am working towards my dreams and trying to build a successful future.<br><br>
+  What makes your guidance special is that you genuinely want to see me succeed. That means more to me than I can fully express.<br><br>
+  I hope that one day, when I achieve my goals, I will be able to make you proud and say:<br><br>
+  <b>"Sir, your student made it!" 🥹💻</b><br><br>
+  Thank you for being a teacher who inspires me to keep moving forward.<br><br>
+  With respect and gratitude,<br>
+  <b>Your Computer Science Student ❤️</b>
+ </div>
+ <button onclick="go(4)">One More Thing... 🌸</button>
+</section>
+
+<section class="screen" id="s4">
+ <div class="small">A FEW REASONS YOU ARE SPECIAL 💖</div>
+ <h1>Because Of You...</h1>
+ <div class="panel">
+  <div class="reason">💗 Because of you, learning becomes meaningful.</div>
+  <div class="reason">🌷 Because of you, mistakes become lessons.</div>
+  <div class="reason">⭐ Because of you, we are encouraged to dream.</div>
+  <div class="reason">🎓 Because of you, we keep working towards a better future.</div>
+ </div>
+ <p>A good teacher teaches a subject.<br>
+ An inspiring teacher helps shape a future.</p>
+ <button onclick="go(5)">Open Your Final Surprise 🎁</button>
+</section>
+
+<section class="screen" id="s5">
+ <div class="small">MADE WITH CODE & GRATITUDE 💻</div>
+ <h1>A Little Surprise For You!</h1>
+ <p>Sir Munzor Jehan, this little digital gift is made especially for you.</p>
+ <div class="gift" onclick="gift()">🎁</div>
+ <p id="giftHint">Tap the gift to reveal your surprise!</p>
+ <div id="final" style="display:none" class="panel">
+  <div style="font-size:48px">💐❤️🎓</div>
+  <h2>You Make A Difference!</h2>
+  <p>In the program of my life, your guidance is a function I will always be grateful for.</p>
+  <h2>Happy Teachers' Day, Sir! 🌷</h2>
+  <p>May your efforts always bring you pride, happiness and success.</p>
+  <p><b>One day, I hope to make you proud! ❤️</b></p>
+ </div>
+ <button onclick="celebrate()">🎉 Celebrate!</button>
+ <p>Made with love by your student 💗</p>
+</section>
+
+<footer> A SMALL WEBSITE FOR A VERY SPECIAL TEACHER ✨ </footer>
+</main>
+
+<script>
+function go(n){
+ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+ document.getElementById('s'+n).classList.add('active');
+ window.scrollTo({top:0,behavior:'smooth'});
+ if(n===2) celebrate();
+}
+function openLetter(){
+ document.getElementById('letter').style.display='block';
+ document.getElementById('hint').textContent='A message written from the heart ❤️';
+ document.getElementById('envelope').style.transform='scale(.95)';
+ celebrate();
+}
+function gift(){
+ document.getElementById('final').style.display='block';
+ document.getElementById('giftHint').textContent='A gift filled with gratitude! 💗';
+ celebrate();
+}
+function celebrate(){
+ const symbols=['💗','🌸','✨','🌷','💖','⭐','🎉'];
+ for(let i=0;i<45;i++){
+  const e=document.createElement('span');
+  e.className='confetti';
+  e.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  e.style.left=Math.random()*100+'vw';
+  e.style.fontSize=(14+Math.random()*16)+'px';
+  e.style.animationDuration=(2+Math.random()*3)+'s';
+  document.body.appendChild(e);
+  setTimeout(()=>e.remove(),5500);
+ }
+}
+</script>
+</body>
+</html>
